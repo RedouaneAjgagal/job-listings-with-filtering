@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings With Filtering</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="filterContainer">
+            <div class="subContainer">
+                <div class="filterSub">
+                    <p class="sub">Frontend</p>
+                    <span class="subBtn" role="button"><img src="./images/icon-remove.svg" alt="" aria-hidden="true"></span>
+                </div>
+                <div class="filterSub">
+                    <p class="sub">Css</p>
+                    <span class="subBtn" role="button"><img src="./images/icon-remove.svg" alt="" aria-hidden="true"></span>
+                </div>
+                <div class="filterSub">
+                    <p class="sub">JavaScript</p>
+                    <span class="subBtn" role="button"><img src="./images/icon-remove.svg" alt="" aria-hidden="true"></span>
+                </div>
+            </div>
+            <div class="clear">
+                <button class="clearBtn">Clear</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="jobsContainer">
+            <div class="jobContainer">
+                <div class="jobInfo">
+                    <div class="imgContainer">
+                        <img class="companyLogo" src="./images/photosnap.svg" alt="photosnap-image">
+                    </div>
+                    <article class="jobContent">
+                        <section class="company">
+                            <h1 class="companyName">Photosnap</h1>
+                            <div class="tags">
+                                <span class="newTag">New!</span>
+                                <span class="featuredTag">Featured</span>
+                            </div>
+                        </section>
+                        <h2 class="position">Senior Frontend Developer</h2>
+                        <div class="jobReq">
+                            <p class="postedAt">1d ago</p>
+                            <hr>
+                            <p class="contract">Full Time</p>
+                            <hr>
+                            <p class="location">USA only</p>
+                        </div>
+                    </article>
+                </div>
+                <hr>
+                <div class="tagsContainer">
+                    <button class="tagBtn">Frontend</button>
+                    <button class="tagBtn">Senior</button>
+                    <button class="tagBtn">HTML</button>
+                    <button class="tagBtn">CSS</button>
+                    <button class="tagBtn">JavaScript</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="./script.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+:root {
+    --darkCyan: #00676ead;
+    --lightCyan: #b7eff344;
+    --light: #fff;
+    --dark: #181818;
+    --gray: #c2c2c2;
+    --darkGray: #666666;
+    --radius: .5rem;
+    --shadow: 0 .5rem 1.5rem #72727254;
+    --thubImg: 4rem;
+    --tagRadius: 30rem;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    font-family: 'Mukta', sans-serif;
+}
+header {
+    background: url('./images/bg-header-mobile.svg') no-repeat;
+    background-size: cover;
+    background-color: var(--darkCyan);
+    min-height: 13rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+header .filterContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--light);
+    border-radius: var(--radius);
+    width: 100%;
+    max-width: 65rem;
+    margin: 0 1rem;
+    position: relative;
+    top: 1.8rem;
+    box-shadow: var(--shadow);
+}
+header .filterContainer .subContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+header .filterContainer .subContainer .filterSub {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background-color: var(--lightCyan);
+    padding: 0 0 0 .5rem;
+    border-radius: var(--radius);
+}
+header .filterContainer .subContainer .filterSub p, main .jobsContainer .jobContainer .tagsContainer button {
+    color: var(--darkCyan);
+    font-weight: 700;
+}
+header .filterContainer .subContainer .filterSub span {
+    display: flex;
+    background-color: var(--darkCyan);
+    padding: .6rem;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+header .filterContainer .subContainer .filterSub span:hover {
+    background-color: var(--dark);
+}
+header .filterContainer .clear .clearBtn {
+    color: var(--darkCyan);
+    font-weight: 700;
+    font-size: .9rem;
+}
+header .filterContainer .clear .clearBtn:hover {
+    text-decoration: underline;
+}
+main {
+    width: 100%;
+    max-width: 67rem;
+    margin: auto;
+    padding: 1rem;
+}
+main .jobsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: var(--shadow);
+    padding: 1.5rem .8rem;
+    border-radius: var(--radius);
+    position: relative;
+}
+main .jobsContainer .jobContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+main .jobsContainer .jobContainer .jobInfo .imgContainer {
+    position: absolute;
+    top: -2rem;
+}
+main .jobsContainer .jobContainer .jobInfo .imgContainer img {
+    max-width: var(--thubImg);
+}
+main .jobsContainer .jobContainer .jobInfo .jobContent {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+main .jobsContainer .jobContainer .jobInfo .jobContent .company {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+main .jobsContainer .jobContainer .jobInfo .jobContent .company .companyName {
+    color: var(--darkCyan);
+    font-size: 1.4rem;
+}
+main .jobsContainer .jobContainer .jobInfo .jobContent .company .tags {
+    display: flex;
+    gap: .5rem;
+}
+main .jobsContainer .jobContainer .jobInfo .jobContent .company .tags span {
+    padding: .15rem .6rem;
+    color: var(--light);
+    border-radius: var(--tagRadius);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .06rem;
+    font-size: .8rem;
+}
+main .jobsContainer .jobContainer .jobInfo .jobContent .company .tags .newTag {
+    background-color: var(--darkCyan);
+}
+main .jobsContainer .jobContainer .jobInfo .jobContent .company .tags .featuredTag {
+    background-color: var(--dark);
+}
+main .jobsContainer .jobContainer .jobInfo .jobContent .position {
+    color: var(--dark);
+    font-size: 1.45rem;
+}
+main .jobsContainer .jobContainer .jobInfo .jobContent .jobReq {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+}
+main .jobsContainer .jobContainer .jobInfo .jobContent .jobReq p {
+    color: var(--darkGray);
+    font-size: 1.1rem;
+    letter-spacing: .1rem;
+}
+main .jobsContainer .jobContainer .jobInfo .jobContent .jobReq hr {
+    border: .4rem dotted var(--gray);
+    border-bottom: none;
+    border-left: none;
+    height: 0rem;
+}
+main .jobsContainer .jobContainer .tagsContainer {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+main .jobsContainer .jobContainer .tagsContainer button {
+    font-size: 1rem;
+    padding: .8rem;
+    background-color: var(--lightCyan);
+    border-radius: var(--radius);
+}
