@@ -8,6 +8,7 @@
     --radius: .5rem;
     --shadow: 0 .5rem 1.5rem #72727254;
     --thubImg: 4rem;
+    --Img: 6rem;
     --tagRadius: 30rem;
 }
 * {
@@ -39,6 +40,7 @@ header .filterContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: .5rem;
     padding: 1rem;
     background-color: var(--light);
     border-radius: var(--radius);
@@ -62,7 +64,7 @@ header .filterContainer .subContainer .filterSub {
     padding: 0 0 0 .5rem;
     border-radius: var(--radius);
 }
-header .filterContainer .subContainer .filterSub p, main .jobsContainer .jobContainer .tagsContainer button {
+header .filterContainer .subContainer .filterSub p, main .jobs .jobContainer .tagsContainer button {
     color: var(--darkCyan);
     font-weight: 700;
 }
@@ -91,47 +93,48 @@ main {
     margin: auto;
     padding: 1rem;
 }
-main .jobsContainer {
+main .jobs {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    box-shadow: var(--shadow);
-    padding: 1.5rem .8rem;
-    border-radius: var(--radius);
-    position: relative;
+    gap: 3.5rem;
 }
-main .jobsContainer .jobContainer {
+main .jobs .jobContainer {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    box-shadow: var(--shadow);
+    padding: 1.5rem .8rem;
+    position: relative;
+    border-radius: var(--radius);
 }
-main .jobsContainer .jobContainer .jobInfo .imgContainer {
+main .jobs .jobContainer .jobInfo .imgContainer {
     position: absolute;
     top: -2rem;
 }
-main .jobsContainer .jobContainer .jobInfo .imgContainer img {
+main .jobs .jobContainer .jobInfo .imgContainer img {
     max-width: var(--thubImg);
 }
-main .jobsContainer .jobContainer .jobInfo .jobContent {
+main .jobs .jobContainer .jobInfo .jobContent {
     margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
-main .jobsContainer .jobContainer .jobInfo .jobContent .company {
+main .jobs .jobContainer .jobInfo .jobContent .company {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    flex-wrap: wrap;
 }
-main .jobsContainer .jobContainer .jobInfo .jobContent .company .companyName {
+main .jobs .jobContainer .jobInfo .jobContent .company .companyName {
     color: var(--darkCyan);
     font-size: 1.4rem;
 }
-main .jobsContainer .jobContainer .jobInfo .jobContent .company .tags {
+main .jobs .jobContainer .jobInfo .jobContent .company .tags {
     display: flex;
     gap: .5rem;
 }
-main .jobsContainer .jobContainer .jobInfo .jobContent .company .tags span {
+main .jobs .jobContainer .jobInfo .jobContent .company .tags span {
     padding: .15rem .6rem;
     color: var(--light);
     border-radius: var(--tagRadius);
@@ -140,40 +143,91 @@ main .jobsContainer .jobContainer .jobInfo .jobContent .company .tags span {
     letter-spacing: .06rem;
     font-size: .8rem;
 }
-main .jobsContainer .jobContainer .jobInfo .jobContent .company .tags .newTag {
+main .jobs .jobContainer .jobInfo .jobContent .company .tags .newTag {
     background-color: var(--darkCyan);
 }
-main .jobsContainer .jobContainer .jobInfo .jobContent .company .tags .featuredTag {
+main .jobs .jobContainer .jobInfo .jobContent .company .tags .featuredTag {
     background-color: var(--dark);
 }
-main .jobsContainer .jobContainer .jobInfo .jobContent .position {
+main .jobs .jobContainer .jobInfo .jobContent .position {
     color: var(--dark);
-    font-size: 1.45rem;
+    font-size: 1.4rem;
 }
-main .jobsContainer .jobContainer .jobInfo .jobContent .jobReq {
+main .jobs .jobContainer .jobInfo .jobContent .jobReq {
     display: flex;
     align-items: center;
-    gap: .7rem;
+    gap: .6rem;
 }
-main .jobsContainer .jobContainer .jobInfo .jobContent .jobReq p {
+main .jobs .jobContainer .jobInfo .jobContent .jobReq p {
     color: var(--darkGray);
     font-size: 1.1rem;
     letter-spacing: .1rem;
 }
-main .jobsContainer .jobContainer .jobInfo .jobContent .jobReq hr {
+main .jobs .jobContainer .jobInfo .jobContent .jobReq hr {
     border: .4rem dotted var(--gray);
     border-bottom: none;
     border-left: none;
     height: 0rem;
 }
-main .jobsContainer .jobContainer .tagsContainer {
+main .jobs .jobContainer .tagsContainer {
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
 }
-main .jobsContainer .jobContainer .tagsContainer button {
+main .jobs .jobContainer .tagsContainer button {
     font-size: 1rem;
     padding: .8rem;
     background-color: var(--lightCyan);
     border-radius: var(--radius);
+    transition: .2s ease-in-out;
+}
+main .jobs .jobContainer .tagsContainer button:hover {
+    background-color: var(--darkCyan);
+    color: var(--light);
+}
+@media (min-width: 374px) {
+    main .jobs .jobContainer {
+        padding: 1.5rem;
+    }
+    main .jobs .jobContainer .jobInfo .jobContent .company {
+        flex-wrap: nowrap;
+    }
+    main .jobs .jobContainer .jobInfo .jobContent .company .tags span {
+        font-size: 1rem;
+    }
+}
+@media (min-width: 768px) {
+    .line {
+        display: none;
+    }
+    main .jobs .jobContainer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    main .jobs .jobContainer .jobInfo {
+        display: flex;    
+        align-items: center;
+        gap: 1.5rem;
+    }
+    main .jobs .jobContainer .jobInfo .imgContainer {
+        position: static;
+        display: flex;
+    }
+    main .jobs .jobContainer .jobInfo .imgContainer img {
+        max-width: var(--Img);
+    }
+    main .jobs .jobContainer .jobInfo .jobContent {
+        gap: .5rem;
+    }
+    main .jobs .jobContainer .tagsContainer {
+        gap: .8rem;
+        justify-content: flex-end;
+    }
+    main .jobs .jobContainer .jobInfo .jobContent {
+        margin-top: 0;
+    }
+    main .jobs .jobContainer .jobInfo .jobContent .jobReq {
+        gap: 1rem;
+    }
 }
