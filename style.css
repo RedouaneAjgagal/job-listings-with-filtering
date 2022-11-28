@@ -197,10 +197,17 @@ main .jobs .jobContainer .tagsContainer button:hover {
     }
 }
 @media (min-width: 768px) {
+    header {
+        background: url(./images/bg-header-desktop.svg)no-repeat;
+        background-size: cover;
+        background-color: var(--darkCyan);
+    }
     .line {
         display: none;
     }
     main .jobs .jobContainer {
+        display: grid;
+        grid-template-columns: 59% auto;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -226,8 +233,5 @@ main .jobs .jobContainer .tagsContainer button:hover {
     }
     main .jobs .jobContainer .jobInfo .jobContent {
         margin-top: 0;
-    }
-    main .jobs .jobContainer .jobInfo .jobContent .jobReq {
-        gap: 1rem;
     }
 }
