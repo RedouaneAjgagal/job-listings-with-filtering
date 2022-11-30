@@ -50,6 +50,10 @@ header .filterContainer {
     position: relative;
     top: 1.8rem;
     box-shadow: var(--shadow);
+    min-height: 4.05rem;
+}
+header .filterContainer.hide {
+    display: none;
 }
 header .filterContainer .subContainer {
     display: flex;
@@ -107,6 +111,12 @@ main .jobs .jobContainer {
     position: relative;
     border-radius: var(--radius);
 }
+main .jobs .jobContainer.featured {
+    border-left: 0.3rem solid var(--darkCyan);
+}
+main .jobs .jobContainer.hide {
+    display: none;
+}
 main .jobs .jobContainer .jobInfo .imgContainer {
     position: absolute;
     top: -2rem;
@@ -161,10 +171,10 @@ main .jobs .jobContainer .jobInfo .jobContent .jobReq {
 main .jobs .jobContainer .jobInfo .jobContent .jobReq p {
     color: var(--darkGray);
     font-size: 1.1rem;
-    letter-spacing: .1rem;
+    letter-spacing: .03rem;
 }
 main .jobs .jobContainer .jobInfo .jobContent .jobReq hr {
-    border: .4rem dotted var(--gray);
+    border: .3rem dotted var(--gray);
     border-bottom: none;
     border-left: none;
     height: 0rem;
@@ -185,7 +195,7 @@ main .jobs .jobContainer .tagsContainer button:hover {
     background-color: var(--darkCyan);
     color: var(--light);
 }
-@media (min-width: 374px) {
+@media (min-width: 384px) {
     main .jobs .jobContainer {
         padding: 1.5rem;
     }
