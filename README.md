@@ -56,7 +56,7 @@ Users should be able to:
 
 ### Challenges
 
-`Filtering:` This probably was the hardest part in the project, i tried multiple ways to make it work, but i always faild, until i found a way to merge all the tags into one array and useed `new Set()` to pick only the unique values and compare them to all the tags
+`Filtering:` This probably was the hardest part in the project, i tried multiple ways to make it work, but i always faild, until i found a way to merge all the tags into one array and useed `new Set()` to pick only the unique values and compare them to all the tags 
 
 ## Author
 
